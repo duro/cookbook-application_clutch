@@ -86,14 +86,6 @@ action :before_migrate do
 end
 
 action :before_symlink do
-
-  # Build client apps
-  execute 'grunt build' do
-    cwd   new_resource.release_path
-    user  new_resource.owner
-    group new_resource.group
-  end
-
 end
 
 action :before_restart do
